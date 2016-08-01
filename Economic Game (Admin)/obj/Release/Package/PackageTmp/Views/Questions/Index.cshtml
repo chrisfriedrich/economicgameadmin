@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Economic_Game__Admin_.Models.Question>
+
+@{
+    ViewBag.Title = "FAQ Questions";
+}
+
+<table class="table table-bordered table-condensed question-list">
+    <tr>
+        <th colspan="3">
+            <h1>
+                Economic Game
+            </h1>
+            <div style="float: right">
+                <a href="/Home/Index" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;&nbsp;Return</a>&nbsp;&nbsp;
+                <a href="/Questions/Create" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Add Question</a>
+            </div>
+            <h4>Administration - FAQ Questions</h4>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.QuestionText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnswerText)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuestionText)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnswerText)
+        </td>
+        <td>
+            <a href="/Games/Edit?id=@item.QuestionID" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Edit</a>&nbsp;
+            <a href="/Games/Delete?id=@item.QuestionID" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;Delete</a>
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.QuestionID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.QuestionID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.QuestionID })*@
+        </td>
+    </tr>
+}
+
+</table>

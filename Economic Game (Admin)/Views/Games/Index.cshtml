@@ -1,0 +1,208 @@
+﻿@model IEnumerable<Economic_Game__Admin_.Models.Game>
+
+@{
+    ViewBag.Title = "Game List";
+}
+
+<table class="table table-bordered table-condensed game-list">
+    <tr>
+        <th colspan="24">
+            <h1>Economic Game</h1>
+            <div style="float: right;">
+                <a href="/Home/Index" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;&nbsp;Return</a>&nbsp;&nbsp;
+                <a href="/Games/ExportToExcel" class="btn btn-default"><span class="glyphicon glyphicon-file"></span>&nbsp;&nbsp;Export to Excel</a>
+            </div>
+            <h4>Administration - Game Data List</h4>
+        </th>
+    </tr>
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.PlayerName)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.AmazonID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartingAmount)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.CurrentRound)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Round1Multiplier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Round2Multiplier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Round3Multiplier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Round4Multiplier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Round1ReturnPercentage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Round2ReturnPercentage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Round3ReturnPercentage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Round4ReturnPercentage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Round1Investment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Round1Kept)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Round1Returned)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Round2Investment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Round2Kept)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Round2Returned)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Round3Investment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Round3Kept)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Round3Returned)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Round4Investment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Round4Kept)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Round4Returned)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlayerTotal)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.ComputerTotal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ComputerPersuasion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ComputerApology)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GameSettingsID)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.PlayerName)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.AmazonID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartingAmount)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.CurrentRound)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Round1Multiplier)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Round2Multiplier)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Round3Multiplier)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Round4Multiplier)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Round1ReturnPercentage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Round2ReturnPercentage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Round3ReturnPercentage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Round4ReturnPercentage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Round1Investment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Round1Kept)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Round1Returned)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Round2Investment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Round2Kept)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Round2Returned)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Round3Investment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Round3Kept)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Round3Returned)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Round4Investment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Round4Kept)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Round4Returned)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlayerTotal)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.ComputerTotal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ComputerPersuasion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ComputerApology)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GameSettingsID)
+        </td>*@
+        <td>
+            <a href="/Games/Edit?id=@item.GameID" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Edit</a>&nbsp;
+            <a href="/Games/Delete?id=@item.GameID" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;Delete</a>
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.GameID }) |*@
+            @*@Html.ActionLink("Details", "Details", new { id=item.GameID }) |*@
+            @*@Html.ActionLink("Delete", "Delete", new { id=item.GameID })*@
+        </td>
+    </tr>
+}
+
+</table>

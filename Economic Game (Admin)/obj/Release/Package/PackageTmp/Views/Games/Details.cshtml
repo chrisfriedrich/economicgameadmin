@@ -1,0 +1,250 @@
+﻿@model Economic_Game__Admin_.Models.Game
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Game</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PlayerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlayerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AmazonID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AmazonID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartingAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartingAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentRound)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentRound)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Round1Multiplier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Round1Multiplier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Round2Multiplier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Round2Multiplier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Round3Multiplier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Round3Multiplier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Round4Multiplier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Round4Multiplier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Round1ReturnPercentage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Round1ReturnPercentage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Round2ReturnPercentage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Round2ReturnPercentage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Round3ReturnPercentage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Round3ReturnPercentage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Round4ReturnPercentage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Round4ReturnPercentage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Round1Investment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Round1Investment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Round1Kept)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Round1Kept)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Round1Returned)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Round1Returned)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Round2Investment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Round2Investment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Round2Kept)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Round2Kept)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Round2Returned)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Round2Returned)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Round3Investment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Round3Investment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Round3Kept)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Round3Kept)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Round3Returned)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Round3Returned)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Round4Investment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Round4Investment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Round4Kept)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Round4Kept)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Round4Returned)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Round4Returned)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlayerTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlayerTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComputerTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComputerTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComputerPersuasion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComputerPersuasion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComputerApology)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComputerApology)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GameSettingsID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GameSettingsID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GameID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

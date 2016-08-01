@@ -1,0 +1,355 @@
+﻿@model Economic_Game__Admin_.Models.Game
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <table class="table table-bordered table-condensed">
+        <tr>
+            <th>
+                <h1>
+                    Economic Game
+                </h1>
+                <h4>
+                    Edit Game Settings
+                </h4>
+            </th>
+        </tr>
+        <tr>
+            <td colspan="2">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.GameID)
+            </td>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.PlayerName, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.PlayerName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PlayerName, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.AmazonID, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.AmazonID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AmazonID, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.StartingAmount, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.StartingAmount, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.StartingAmount, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.CurrentRound, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.CurrentRound, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CurrentRound, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Round1Multiplier, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Round1Multiplier, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Round1Multiplier, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Round2Multiplier, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Round2Multiplier, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Round2Multiplier, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Round3Multiplier, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Round3Multiplier, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Round3Multiplier, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Round4Multiplier, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Round4Multiplier, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Round4Multiplier, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Round1ReturnPercentage, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Round1ReturnPercentage, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Round1ReturnPercentage, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Round2ReturnPercentage, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Round2ReturnPercentage, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Round2ReturnPercentage, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Round3ReturnPercentage, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Round3ReturnPercentage, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Round3ReturnPercentage, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Round4ReturnPercentage, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Round4ReturnPercentage, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Round4ReturnPercentage, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Round1Investment, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Round1Investment, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Round1Investment, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Round1Kept, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Round1Kept, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Round1Kept, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Round1Returned, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Round1Returned, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Round1Returned, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Round2Investment, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Round2Investment, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Round2Investment, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Round2Kept, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Round2Kept, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Round2Kept, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Round2Returned, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Round2Returned, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Round2Returned, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Round3Investment, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Round3Investment, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Round3Investment, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Round3Kept, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Round3Kept, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Round3Kept, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Round3Returned, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Round3Returned, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Round3Returned, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Round4Investment, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Round4Investment, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Round4Investment, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Round4Kept, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Round4Kept, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Round4Kept, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Round4Returned, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Round4Returned, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Round4Returned, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.PlayerTotal, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.PlayerTotal, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PlayerTotal, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.ComputerTotal, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.ComputerTotal, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ComputerTotal, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.ComputerPersuasion, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.ComputerPersuasion, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ComputerPersuasion, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.ComputerApology, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.ComputerApology, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ComputerApology, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.GameSettingsID, htmlAttributes: new { @class = "control-label" })
+            </td>
+            <td>
+                @Html.EditorFor(model => model.GameSettingsID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.GameSettingsID, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </td>
+        </tr>
+
+    </table>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
