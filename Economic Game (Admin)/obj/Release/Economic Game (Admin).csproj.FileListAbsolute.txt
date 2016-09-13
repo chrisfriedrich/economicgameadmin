@@ -66,3 +66,4 @@ D:\Documents\Visual Studio 2015\Projects\Economic Game (Admin)\Economic Game (Ad
 D:\Documents\Visual Studio 2015\Projects\Economic Game (Admin)\Economic Game (Admin)\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\Documents\Visual Studio 2015\Projects\Economic Game (Admin)\Economic Game (Admin)\obj\Release\Economic Game (Admin).dll
 D:\Documents\Visual Studio 2015\Projects\Economic Game (Admin)\Economic Game (Admin)\obj\Release\Economic Game (Admin).pdb
+D:\Documents\Visual Studio 2015\Projects\Economic Game (Admin)\Economic Game (Admin)\obj\Release\Economic Game (Admin).csprojResolveAssemblyReference.cache
