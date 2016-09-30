@@ -9,7 +9,7 @@
     <tr>
         <th colspan="13">
             <h1>
-                Economic Game
+                Investment Game
             </h1>
             <h4>
                 Administration - Game Settings Sets
@@ -22,55 +22,38 @@
     </tr>
     <tr>
         <th>
-            @*@Html.DisplayNameFor(model => model.Name)*@
             Name
         </th>
         <th>
-            @*@Html.DisplayNameFor(model => model.Description)*@
             Description
         </th>
         <th>
-            @*@Html.DisplayNameFor(model => model.StartingAmount)*@
             Starting Amount
         </th>
         <th>
-            @*@Html.DisplayNameFor(model => model.Round1Multiplier)*@
             Round 1 X
         </th>
         <th>
-            @*@Html.DisplayNameFor(model => model.Round2Multiplier)*@
             Round 2 X
         </th>
         <th>
-            @*@Html.DisplayNameFor(model => model.Round3Multiplier)*@
             Round 3 X
         </th>
         <th>
-            @*@Html.DisplayNameFor(model => model.Round4Multiplier)*@
             Round 4 X
         </th>
         <th>
-            @*@Html.DisplayNameFor(model => model.Round1ReturnPercentage)*@
             Round 1 Return %
         </th>
         <th>
-            @*@Html.DisplayNameFor(model => model.Round2ReturnPercentage)*@
             Round 2 Return %
         </th>
         <th>
-            @*@Html.DisplayNameFor(model => model.Round3ReturnPercentage)*@
             Round 3 Return %
         </th>
         <th>
-            @*@Html.DisplayNameFor(model => model.Round4ReturnPercentage)*@
             Round 4 Return %
         </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.ComputerApology)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ComputerPersuasion)
-        </th>*@
         <th>
             Default
         </th>
@@ -112,23 +95,13 @@
         <td>
             @Html.DisplayFor(modelItem => item.Round4ReturnPercentage)
         </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.ComputerApology)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ComputerPersuasion)
-        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.SelectedSettings)
         </td>
         <td style="text-align: center;">
             <a href="/GameSettings/Edit?id=@item.GameSettingsID" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-pencil"></span>&nbsp;Edit</a>&nbsp;&nbsp;
-            @*<a href="/GameSettings/Details?id=@item.GameSettingsID" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-pencil"></span>&nbsp;Edit</a>*@
             <a href="/GameSettings/Delete?id=@item.GameSettingsID" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove"></span>&nbsp;Delete</a>
-            <a href="/GameSettings/SetDefault?id=@item.GameSettingsID" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-check"></span>&nbsp;Make Default</a>
-            @*@Html.ActionLink("Edit", "Edit", new { id=item.GameSettingsID, @class="btn btn-default btn-xs" }) &nbsp;
-            @Html.ActionLink("Details", "Details", new { id = item.GameSettingsID, @class = "btn btn-default btn-xs" })&nbsp;
-            @Html.ActionLink("Delete", "Delete", new { id=item.GameSettingsID, @class = "btn btn-default btn-xs" })*@
+            <a style="margin-top: 5px;" href="/GameSettings/SetDefault?id=@item.GameSettingsID" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-check"></span>&nbsp;Make Default</a>
         </td>
     </tr>
 }

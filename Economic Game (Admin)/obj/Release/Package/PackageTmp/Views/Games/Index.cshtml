@@ -7,10 +7,11 @@
 <table class="table table-bordered table-condensed game-list">
     <tr>
         <th colspan="24">
-            <h1>Economic Game</h1>
+            <h1>Investment Game</h1>
             <div style="float: right;">
                 <a href="/Home/Index" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;&nbsp;Return</a>&nbsp;&nbsp;
-                <a href="/Games/ExportToExcel" class="btn btn-default"><span class="glyphicon glyphicon-file"></span>&nbsp;&nbsp;Export to Excel</a>
+                <a href="/Games/ExportToExcel" class="btn btn-default"><span class="glyphicon glyphicon-file"></span>&nbsp;&nbsp;Export to Excel</a>&nbsp;&nbsp;
+                <a href="/Games/DeleteAll" class="btn btn-default btn-danger"><span class="glyphicon glyphicon-exclamation-sign"></span>&nbsp;&nbsp;Delete All Records</a>
             </div>
             <h4>Administration - Game Data List</h4>
         </th>
@@ -196,7 +197,7 @@
             @Html.DisplayFor(modelItem => item.GameSettingsID)
         </td>*@
         <td>
-            <a href="/Games/Edit?id=@item.GameID" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Edit</a>&nbsp;
+            <a href="/Games/Details?id=@item.GameID" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-search"></span>&nbsp;&nbsp;Details</a>&nbsp;
             <a href="/Games/Delete?id=@item.GameID" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;Delete</a>
             @*@Html.ActionLink("Edit", "Edit", new { id=item.GameID }) |*@
             @*@Html.ActionLink("Details", "Details", new { id=item.GameID }) |*@

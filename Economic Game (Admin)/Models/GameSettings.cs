@@ -36,11 +36,6 @@ namespace Economic_Game__Admin_.Models
         [Display(Name = "Round 4 Return %")]
         public decimal? Round4ReturnPercentage { get; set; }
 
-        [Display(Name = "Persuasion")]
-        public string ComputerPersuasion { get; set; }
-        [Display(Name = "Apology")]
-        public string ComputerApology { get; set; }
-
         [Display(Name = "Default")]
         public bool? SelectedSettings { get; set; }
     }

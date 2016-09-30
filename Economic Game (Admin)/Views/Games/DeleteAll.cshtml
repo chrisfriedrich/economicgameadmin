@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "DeleteAll";
+}
+
+<h2 class="text-danger text-center">Clicking <strong>Delete All Games</strong> will delete all game records from the system.  Are you sure?</h2>
+<br />
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<p class="text-center">
+    <a href="~/Games" class="btn btn-default"><span class="glyphicon glyphicon-ban-circle"></span>&nbsp;&nbsp;Cancel</a>&nbsp;&nbsp;
+    <button type="submit" class="btn btn-default btn-danger"><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;&nbsp;Delete All Games</button>
+</p>
+}

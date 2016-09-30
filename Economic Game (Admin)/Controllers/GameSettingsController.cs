@@ -120,15 +120,20 @@ namespace Economic_Game__Admin_.Controllers
         public ActionResult SetDefault(int id)
         {
             GameSettings existingDefault = db.GameSettings.FirstOrDefault(x => x.SelectedSettings == true);
-            existingDefault.SelectedSettings = false;
-            db.Entry(existingDefault).State = EntityState.Modified;
-            db.SaveChanges();
+            if (existingDefault != null)
+            {
+                existingDefault.SelectedSettings = false;
+                db.Entry(existingDefault).State = EntityState.Modified;
+                db.SaveChanges();
+            }
 
             GameSettings newDefault = db.GameSettings.Find(id);
-            newDefault.SelectedSettings = true;
-            db.Entry(newDefault).State = EntityState.Modified;
-            db.SaveChanges();
-
+            if (newDefault != null)
+            {
+                newDefault.SelectedSettings = true;
+                db.Entry(newDefault).State = EntityState.Modified;
+                db.SaveChanges();
+            }
             return RedirectToAction("Index");   
         }
 

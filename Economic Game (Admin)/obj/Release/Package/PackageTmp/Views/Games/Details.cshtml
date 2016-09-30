@@ -4,19 +4,12 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<div style="width: 500px; margin: 0 auto;">
 
-<div>
-    <h4>Game</h4>
+    <h2>Game Details</h2>
+
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.PlayerName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PlayerName)
-        </dd>
 
         <dt>
             @Html.DisplayNameFor(model => model.AmazonID)
@@ -219,22 +212,6 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ComputerPersuasion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ComputerPersuasion)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ComputerApology)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ComputerApology)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.GameSettingsID)
         </dt>
 
@@ -243,8 +220,8 @@
         </dd>
 
     </dl>
+
+    <p class="text-center">
+          <a href="~/Games" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;&nbsp;Return to List</a>
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.GameID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

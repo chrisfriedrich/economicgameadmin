@@ -22,7 +22,7 @@ namespace Economic_Game__Admin_.Controllers
         // GET: Games
         public ActionResult Index()
         {
-            return View(db.Games.ToList());
+            return View(db.Games.OrderByDescending(x => x.GameID).ToList());
         }
 
         // GET: Games/Details/5
@@ -120,6 +120,26 @@ namespace Economic_Game__Admin_.Controllers
             return RedirectToAction("Index");
         }
 
+        // GET: Games/DeleteAll
+        public ActionResult DeleteAll()
+        {
+            return View();
+        }
+
+        // POST: Games/Delete/5
+        [HttpPost, ActionName("DeleteAll")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteAllConfirmed()
+        {
+            List<Game> games = db.Games.ToList();
+            foreach (Game game in games)
+            {
+                db.Games.Remove(game);
+            }
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
         public ActionResult ExportToExcel()
         {
             //var products = new System.Data.DataTable("teste");
@@ -136,8 +156,9 @@ namespace Economic_Game__Admin_.Controllers
 
 
             var grid = new GridView();
-            grid.DataSource = db.Games.ToList();
+            grid.DataSource = db.Games.OrderByDescending(x => x.GameID).ToList();
             grid.DataBind();
+
 
             Response.ClearContent();
             Response.Buffer = true;

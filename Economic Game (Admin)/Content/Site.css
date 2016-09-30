@@ -29,7 +29,11 @@ textarea {
     max-width: 500px;
     margin: 0 auto;
     box-shadow: 0 0 30px black;
-    padding:0 15px 0 15px;
+    padding:15px 15px 15px 15px;
+}
+
+.main-menu h2 {
+    margin: 10px;
 }
 
 .gamesetting-list {
@@ -45,6 +49,7 @@ textarea {
 }
 
 .game-list {
+    width: 100%;
     margin: 0 auto;
     box-shadow: 0 0 30px black;
     padding:0 15px 0 15px;

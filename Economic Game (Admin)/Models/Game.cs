@@ -10,7 +10,6 @@ namespace Economic_Game__Admin_.Models
     public class Game
     {
         public int GameID { get; set; }
-        public string PlayerName { get; set; }
         public string AmazonID { get; set; }
         [Display(Name = "Starting Amount")]
         public decimal? StartingAmount { get; set; }
@@ -68,12 +67,6 @@ namespace Economic_Game__Admin_.Models
         public decimal? PlayerTotal { get; set; }
         [Display(Name = "Computer Total")]
         public decimal? ComputerTotal { get; set; }
-
-        [Display(Name = "Persuasion")]
-        public string ComputerPersuasion { get; set; }
-        [Display(Name = "Apology")]
-        public string ComputerApology { get; set; }
-
 
         public int? GameSettingsID { get; set; }
 
